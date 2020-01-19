@@ -11,26 +11,6 @@ import (
 var db *sqlx.DB
 var router *gin.Engine
 
-type Hospital struct {
-	HospitalId       int    `db:"id" json:"id"`
-	HospitalName     string `db:"name" json:"name"`
-	MaxPatientAmount int    `db:"max_patient_amount" json:"max_patient_amount"`
-}
-
-type Location struct {
-	LocationId   int    `db:"id" json:"id"`
-	LocationName string `db:"name" json:"name"`
-	HospitalId   int    `db:"hospital_id" json:"hospital_id"`
-}
-
-type Patient struct {
-	PatientId   int    `db:"id" json:"id"`
-	PatientName string `db:"name" json:"name"`
-	Illness     string `db:"illness" json:"illness"`
-	BirthDate   string `db:"birth_date" json:"birth_date"`
-	LocationId  int    `db:"location_id" json:"location_id"`
-}
-
 /*
 connect with the database instance
 */
