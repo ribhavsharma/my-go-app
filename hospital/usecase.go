@@ -1,7 +1,11 @@
 package hospital
 
+import (
+	"github.com/ribhavsharma/my-go-app/models"
+)
+
 type Usecase interface {
-	Fetch([]models.hospital, error)
-	GetById(id int64) (models.hospital, error)
-	New(hospital models.hospital) error
+	Fetch() ([]models.Hospital, error)
+	GetById(id int64) (models.Hospital, error)
+	New(hospital models.Hospital) error
 }
